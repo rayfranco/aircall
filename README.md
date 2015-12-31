@@ -1,6 +1,6 @@
 # Aircall
 
-An [Aircall](aircall.io) API for node.
+An [Aircall](http://aircall.io) API for node.
 
 ## Installation
 
