@@ -53,3 +53,13 @@ aircall.users.get(12345, function(err, res){
 ## API
 
 ___Coming soon___
+
+## Tests
+
+Rename `test/config.example.js` to `test/config.js` and replace the credentials with your `apiID` and `apiToken`.
+
+Then you can run the tests
+
+```bash
+$ npm test
+```
