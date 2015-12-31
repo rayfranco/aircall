@@ -4,7 +4,9 @@ An [Aircall](aircall.io) API for node.
 
 ## Installation
 
-  $ npm install aircall
+```bash
+$ npm install aircall
+```
 
 ## Example
 
@@ -43,7 +45,7 @@ aircall.calls.list(function(err, res){
 Get specific user
 
 ```javascript
-aircall.user.get(12345, function(err, res){
+aircall.users.get(12345, function(err, res){
   console.log(res.user)
 })
 ```
