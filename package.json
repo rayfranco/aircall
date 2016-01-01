@@ -1,6 +1,6 @@
 {
   "name": "aircall",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Aircall API for node",
   "main": "./lib",
   "repository": "git://github.com/rayfranco/aircall.git",
