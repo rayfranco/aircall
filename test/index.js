@@ -131,17 +131,14 @@ describe('aircall', function() {
       });
     });
 
-    //!\\ API Should be fixed
-    //
-    // it('should be able to search a contact by phone', function(done) {
-    //   aircall.contacts.searchByEmail(contact.phone_numbers[0].value, function(err, res) {
-    //     if (err) return done(err);
-    //     console.log(res)
-    //     assert(res);
-    //     assert(res.meta.count > 0);
-    //     done();
-    //   });
-    // });
+    it('should be able to search a contact by phone', function(done) {
+      aircall.contacts.searchByPhoneNumber(contact.phone_numbers[0].value, function(err, res) {
+        if (err) return done(err);
+        assert(res);
+        assert(res.meta.count > 0);
+        done();
+      });
+    });
 
     it('should be able to search a contact by email', function(done) {
       aircall.contacts.searchByEmail(contact.emails[0].value, function(err, res) {
