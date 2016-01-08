@@ -9,7 +9,7 @@
     "API"
   ],
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec --timeout 5000"
   },
   "author": "Franco Bouly (@rayfranco)",
   "license": "MIT",
