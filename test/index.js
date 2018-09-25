@@ -1,7 +1,7 @@
-var assert = require('assert');
 var Aircall = require('..');
-var util = require('util');
+var assert = require('assert');
 var config = require('./config');
+var util = require('util');
 
 describe('aircall', function() {
   var aircall = Aircall(config.apiID, config.apiToken);
@@ -67,7 +67,7 @@ describe('aircall', function() {
         if (err) return done(err);
         assert(res);
         assert(Array.isArray(res.numbers));
-        id = res.numbers[0].id;
+        id = res.numbers[0] && res.numbers[0].id;
         done();
       });
     });
@@ -180,7 +180,7 @@ describe('aircall', function() {
         if (err) return done(err);
         assert(res);
         assert(Array.isArray(res.calls));
-        id = res.calls[0].id;
+        id = res.calls[0] && res.calls[0].id;
         done();
       });
     });
@@ -194,5 +194,63 @@ describe('aircall', function() {
       });
     });
   });
+  
+  // Tags
 
+  describe('Tags', function () {
+    var id;
+    var tag = {
+      name: 'test',
+      color: '#ffffff',
+      description: "A test tag"
+    };
+
+    it('should be able to create a tag', function (done) {
+      aircall.tags.create(function (err, res) {
+        if (err) return done(err);
+        assert(res);
+        assert.equal(res.tag.name, tag.name);
+        id = res.tag.id
+        done();
+      }, tag);
+    });
+
+    it('should be able to get a list of tags', function (done) {
+      aircall.tags.list(function (err, res) {
+        if (err) return done(err);
+        assert(res);
+        assert(Array.isArray(res.tags));
+        done();
+      });
+    });
+
+    it('should be able to get a tag', function (done) {
+      aircall.tags.get(id, function (err, res) {
+        if (err) return done(err);
+        assert(res);
+        assert.equal(res.tag.name, tag.name);
+        done();
+      });
+    });
+
+    it('should be able to update a tag', function (done) {
+      aircall.tags.update(id, function (err, res) {
+        if (err) return done(err);
+        assert(res);
+        assert.equal(res.tag.name, 'test-update');
+        done();
+      }, {
+          name: 'test-update'
+        });
+    });
+
+    it('should be able to delete a tag', function (done) {
+      aircall.tags.delete(id, function (err, res) {
+        if (err) return done(err);
+        // actually API returns {}
+        assert(res);
+        done();
+      });
+    });
+  });
 });
