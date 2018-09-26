@@ -1,10 +1,9 @@
 var Aircall = require('..');
 var assert = require('assert');
-var config = require('./config');
 var util = require('util');
 
 describe('aircall', function() {
-  var aircall = Aircall(config.apiID, config.apiToken);
+  var aircall = Aircall(process.env.AIRCALL_ID, process.env.AIRCALL_TOKEN);
 
   describe('Aircall', function() {
 

@@ -1,5 +1,7 @@
 # Aircall
 
+[![Build Status](https://travis-ci.org/rayfranco/aircall.svg?branch=master)](https://travis-ci.org/rayfranco/aircall)
+
 An [Aircall](https://developer.aircall.io/api-references/) API for node.
 
 ## Installation
@@ -56,7 +58,7 @@ ___Coming soon___
 
 ## Tests
 
-- Rename `test/config.example.js` to `test/config.js` and replace the credentials with your `apiID` and `apiToken`.
+- Add `AIRCALL_ID` and `AIRCALL_TOKEN` environment variables corresponding to your account.
 - Make sure you have at least one `Call` and one `User` in your account before running the tests.
 - Be aware that the tests will create a dummy Contact _(John or Jane Doe)_ in your account. If anything goes wrong in the Contact block, you may have to manually delete this contact.
 
