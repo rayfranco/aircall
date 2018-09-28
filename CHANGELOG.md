@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.1.0] - 2018-09-26
+### Added
+- Tags endpoint
+- ENV variable instead of config file in tests suite
+
+### Fixed
+- API routes fails
+
 ## [0.0.2] - 2015-01-01
 ### Added
 - Complete test suite

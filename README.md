@@ -52,10 +52,6 @@ aircall.users.get(12345, function(err, res){
 })
 ```
 
-## API
-
-___Coming soon___
-
 ## Tests
 
 - Add `AIRCALL_ID` and `AIRCALL_TOKEN` environment variables corresponding to your account.
