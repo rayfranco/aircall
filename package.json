@@ -14,7 +14,6 @@
   "author": "Franco Bouly (@rayfranco)",
   "license": "MIT",
   "dependencies": {
-    "debug": "^4.0.1",
     "defaults": "~1.0.3",
     "superagent": "^3.8.3"
   },
