@@ -200,8 +200,7 @@ describe('aircall', function() {
     var id;
     var tag = {
       name: 'test',
-      color: '#ffffff',
-      description: "A test tag"
+      color: '#ffffff'
     };
 
     it('should be able to create a tag', function (done) {
