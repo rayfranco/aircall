@@ -1,9 +1,9 @@
 {
-  "name": "aircall",
-  "version": "0.1.0",
+  "name": "@govirtuo/aircall",
+  "version": "0.2.0",
   "description": "Aircall API for node",
   "main": "./lib",
-  "repository": "git://github.com/rayfranco/aircall.git",
+  "repository": "git://github.com/govirtuo/aircall.git",
   "keywords": [
     "aircall",
     "API"
